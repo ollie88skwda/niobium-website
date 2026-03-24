@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 
-const PORTAL_PASSWORD = 'niobium';
+const PORTAL_PASSWORD = 'lunchtime26';
 
 const LINKS = [
   {
