@@ -30,7 +30,7 @@ const LINKS = [
     items: [
       { label: 'INSTAGRAM', sub: '@niobiumagency', href: 'https://instagram.com', external: true },
       { label: 'TWITTER / X', sub: '@niobiumagency', href: 'https://twitter.com', external: true },
-      { label: 'LINKEDIN', sub: 'Company page', href: 'https://linkedin.com', external: true },
+      { label: 'GITHUB', sub: 'Github', href: 'https://github.com/ollie88skwda/niobium-website', external: true },
     ],
   },
   
