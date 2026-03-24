@@ -1,17 +1,12 @@
 import Navbar from '@/components/Navbar';
 
-const Portal = () => {
+const PortalPage = () => {
   return (
-    <div style={{ minHeight: '100vh', background: '#0e0e0e' }}>
+    <div style={{ paddingTop: '60px' }}>
       <Navbar />
-      <div style={{ paddingTop: '6rem' }}>
-        {/* Existing content goes here */}
-        <div style={{ position: 'sticky', top: '5.5rem' }}>
-          {/* Stickiness and other existing behaviors */}
-        </div>
-      </div>
+      {/* Existing JSX content from commit 22ef0f49a05f72a67113b53677ea1011dae4da2d */}
     </div>
   );
 };
 
-export default Portal;
+export default PortalPage;
