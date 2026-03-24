@@ -6,6 +6,16 @@ const PORTAL_PASSWORD = 'niobium';
 
 const LINKS = [
   {
+    category: 'TOOLS',
+    accent: '#842bd2',
+    items: [
+      { label: 'CLICKUP', sub: 'Niobium Hub', href: 'https://app.clickup.com/90141049767/v/cn/7-90141049767-8', external: true },
+      { label: 'GMAIL', sub: 'Business inbox', href: 'https://mail.google.com', external: true },
+      // { label: 'FIGMA', sub: 'Brand & design files', href: 'https://figma.com', external: true },
+      { label: 'MIRO', sub: 'Online group whiteboard', href: 'https://miro.com/online-whiteboard/board/uXjVGtbHHno=/?boardAccessToken=FNjgMTkEHbnFXaKQ6vn8AcTDR1XMOROu', external: true },
+    ],
+  },
+  {
     category: 'WEBSITE',
     accent: '#842bd2',
     items: [
@@ -23,16 +33,7 @@ const LINKS = [
       { label: 'LINKEDIN', sub: 'Company page', href: 'https://linkedin.com', external: true },
     ],
   },
-  {
-    category: 'TOOLS',
-    accent: '#842bd2',
-    items: [
-      { label: 'ANALYTICS', sub: 'Traffic & performance insights', href: 'https://analytics.google.com', external: true },
-      { label: 'GMAIL', sub: 'Business inbox', href: 'https://mail.google.com', external: true },
-      { label: 'FIGMA', sub: 'Brand & design files', href: 'https://figma.com', external: true },
-      { label: 'GITHUB', sub: 'Website source code', href: 'https://github.com/ollie88skwda/niobium-website', external: true },
-    ],
-  },
+  
 ];
 
 export default function PortalPage() {
