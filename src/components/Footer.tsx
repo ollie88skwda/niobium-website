@@ -5,9 +5,9 @@ export default function Footer() {
         NIOBIUM
       </div>
       <div className="uppercase tracking-[0.1em] text-[0.6875rem] text-[#c6c6c6]">
-        &copy; 2024 NIOBIUM AGENCY. ALL RIGHTS RESERVED.
+        &copy; 2026 NIOBIUM AGENCY. ALL RIGHTS RESERVED.
       </div>
-      <div className="flex gap-12">
+      {/* <div className="flex gap-12">
         <a
           className="uppercase tracking-[0.1em] text-[0.6875rem] text-[#c6c6c6] hover:text-[#842bd2] transition-colors duration-300"
           href="#"
@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
       <div className="hidden md:block">
         <div className="w-2 h-2 rounded-full bg-[#842bd2]/40"></div>
-      </div>
+      </div> */}
     </footer>
   );
 }
