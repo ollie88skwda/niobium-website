@@ -71,7 +71,7 @@ export default function ContactPage() {
         </section>
 
         {/* Inquiry Details */}
-        <div className="w-full bg-white py-32">
+        <div className="w-full bg-white py-32 border-b-[4px] border-black">
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-start gap-12">
               <div className="max-w-xs">

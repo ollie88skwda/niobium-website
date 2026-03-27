@@ -201,41 +201,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-32 px-8 md:px-24 bg-black reveal-on-scroll">
-          <div className="max-w-[1440px] mx-auto">
-            <div className="mb-24">
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary-fixed block mb-4">COMMON QUESTIONS</span>
-              <h2 className="font-display text-8xl md:text-[10rem] leading-none tracking-tight text-white uppercase">FAQ</h2>
-            </div>
-            <div className="divide-y divide-white/10">
-              {[
-                {
-                  q: "What types of businesses do you work with?",
-                  a: "We work with ambitious brands across all industries — from e-commerce and fashion to tech startups and professional services. If you're serious about growth, we're serious about you.",
-                },
-                {
-                  q: "How long before I see results from SEO?",
-                  a: "SEO is a long game. Most clients see measurable ranking improvements within 3–6 months. Social media and content marketing can generate engagement within weeks. We set honest expectations from day one.",
-                },
-                {
-                  q: "Do you offer one-off projects or retainers?",
-                  a: "Both. We offer one-off strategy audits and campaign builds, as well as monthly retainers for ongoing social media management, SEO, and content publishing.",
-                },
-                {
-                  q: "What makes Niobium different from other agencies?",
-                  a: "No account managers playing telephone. You work directly with the people doing the work. We're lean, fast, and obsessed with precision — no bloat, no buzzwords.",
-                },
-              ].map((item) => (
-                <div key={item.q} className="py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <h3 className="font-display text-3xl md:text-4xl text-white uppercase leading-tight">{item.q}</h3>
-                  <p className="font-mono text-sm text-white/60 uppercase leading-relaxed self-center">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <ReadyToAscend />
       </main>
     </>

@@ -114,10 +114,6 @@ export default function AboutPage() {
                     desc: "No bloat. No unnecessary layers. Just elite talent focused on the essential core of your product.",
                   },
                   {
-                    title: "AI-Powered",
-                    desc: "We leverage cutting-edge neural frameworks to accelerate development without sacrificing bespoke quality.",
-                  },
-                  {
                     title: "Built Different",
                     desc: "We reject industry standard templates. Every pixel is carved from the ground up for absolute uniqueness.",
                   },
