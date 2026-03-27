@@ -1,6 +1,7 @@
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ReadyToAscend from "@/components/ReadyToAscend";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "About | Niobium Agency",
@@ -69,7 +70,7 @@ export default function AboutPage() {
                   img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBm4cl8xmwejhCoVSklPOF535yFwdRyO5OG1ELacu9JTcYADOZB3L9wm5s6ElxIr56NmYUggvTh2Rg8LdP8Q8Xm-IgQJmcVXvKk6p1MtGlgne_mUSvN9QJPivjQg_th9HCZYJXn0tE-K-mazf3vb3GtTUKJaF09PRN67qisVDA3sST6yTtywOutKdGH2a3YprkufCMC5emb_SrcApL4jRUF6UaXXbsrovO6vTYMMGJKGicyhpQNsrAZaWhtxKuiB9c7kMHRa7tBAQ",
                 },
               ].map((founder) => (
-                <div key={founder.name} className="bg-white p-6 brutalist-card group">
+                <Link href="/contact" key={founder.name} className="bg-white p-6 brutalist-card group block">
                   <div className="aspect-[4/5] overflow-hidden mb-8 bg-gray-100 border-[4px] border-black relative">
                     <Image
                       alt={founder.name}
@@ -88,7 +89,7 @@ export default function AboutPage() {
                       arrow_outward
                     </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -103,7 +104,7 @@ export default function AboutPage() {
                   WHY <br /> NIOBIUM?
                 </h2>
               </div>
-              <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12">
                 {[
                   {
                     title: "Local Presence",

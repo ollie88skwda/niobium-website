@@ -74,7 +74,8 @@ export default function Home() {
                   desc: "Intellectual authority through deep-form narrative and data-driven editorial precision.",
                 },
               ].map((service) => (
-                <div
+                <Link
+                  href="/contact"
                   key={service.num}
                   className="bg-black p-10 flex flex-col justify-between min-h-[440px] border border-white transition-transform hover:-translate-y-2 hover:shadow-[6px_6px_0px_#842bd2]"
                 >
@@ -91,7 +92,7 @@ export default function Home() {
                   <p className="font-mono text-sm text-white font-normal uppercase tracking-tight leading-relaxed">
                     {service.desc}
                   </p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -106,7 +107,7 @@ export default function Home() {
                   WORK
                 </h2>
                 <Link href="/contact" className="font-body text-[0.75rem] uppercase tracking-[0.3em] text-primary-fixed font-black border-b-4 border-primary-fixed cursor-pointer">
-                  View All Projects
+                  Start a Project
                 </Link>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -132,7 +133,7 @@ export default function Home() {
                     img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCgUB5cNAQL3L-t_7f-7ByEjpfdocJMkveOm4mWAf9jS4jHH12nZ9tKEckhdLKy9zSD8D_-NdkkkEaBD99RDzk6XOLopOZ5bhm6NoT1ECLJwEx-oVXgClwiSRN5ck0OAWhinQ_WfkkenQ6zFsdWmxzhADIEcqqU9G52YYAXYrVchFns02rlXZnBIR-H38U1nR2aGxOJAYof3s1fSyuHbO5OGw8nfGaH_1luX1H-mV6DiQo5BKN2Ss5rPGoH8cbEBd6WjMaGgNOhwQ",
                   },
                 ].map((project) => (
-                  <div key={project.title} className="brutalist-card-white bg-white p-4 space-y-6 group">
+                  <Link href="/contact" key={project.title} className="brutalist-card-white bg-white p-4 space-y-6 group block">
                     <div className="aspect-[4/5] overflow-hidden bg-black border-[4px] border-black relative">
                       <Image
                         alt={project.title}
@@ -155,7 +156,7 @@ export default function Home() {
                         arrow_outward
                       </span>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -173,25 +174,28 @@ export default function Home() {
                 THE PROCESS
               </span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t-[4px] border-black">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t-[4px] border-b-[4px] border-black">
               {[
                 {
                   step: "01",
                   title: "Discovery",
                   desc: "We audit your current presence, define your target audience, and identify the gaps where your competitors are winning.",
+                  border: "border-b-[4px] md:border-b-0 md:border-r-[4px]",
                 },
                 {
                   step: "02",
                   title: "Strategy",
                   desc: "A bespoke content and SEO roadmap built around your goals — no templates, no recycled playbooks.",
+                  border: "border-b-[4px] md:border-b-0 md:border-r-[4px]",
                 },
                 {
                   step: "03",
                   title: "Execution",
                   desc: "We deploy. Weekly content, monthly SEO reports, and continuous optimisation until your brand owns its space.",
+                  border: "",
                 },
               ].map((item) => (
-                <div key={item.step} className="p-12 border-b-[4px] md:border-b-0 md:border-r-[4px] border-black last:border-r-0 last:border-b-0">
+                <div key={item.step} className={`p-12 border-black ${item.border}`}>
                   <span className="font-mono text-5xl text-black/20 block mb-8">{item.step}</span>
                   <h3 className="font-display text-5xl text-black uppercase mb-6">{item.title}</h3>
                   <p className="font-mono text-sm text-black/60 uppercase leading-relaxed">{item.desc}</p>

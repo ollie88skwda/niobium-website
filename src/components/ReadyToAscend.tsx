@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ReadyToAscend() {
   return (
-    <section className="py-64 bg-white text-center px-8 reveal-on-scroll">
+    <section className="py-64 bg-white text-center px-8 reveal-on-scroll border-t-[4px] border-black">
       <h2 className="font-display text-7xl md:text-[14rem] leading-none mb-24 tracking-tight uppercase text-black font-normal">
         Ready to Ascend?
       </h2>

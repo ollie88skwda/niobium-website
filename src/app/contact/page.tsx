@@ -13,7 +13,7 @@ export default function ContactPage() {
       <RevealOnScroll />
       <main>
         {/* Hero + Form side by side on black */}
-        <section className="h-screen w-full flex items-center bg-black">
+        <section className="min-h-screen w-full flex items-center bg-black py-24">
           <div className="max-w-7xl mx-auto w-full px-8 pt-16 lg:grid lg:grid-cols-12 lg:gap-16 items-center">
 
             {/* Left: Heading + contact info */}
