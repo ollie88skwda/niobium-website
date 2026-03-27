@@ -31,9 +31,9 @@ export default function Navbar() {
           <Link
             key={link.label}
             href={link.href}
-            className={`uppercase tracking-[0.1em] text-[0.6875rem] font-medium transition-colors duration-200 ${
+            className={`relative uppercase tracking-[0.1em] text-[0.6875rem] font-medium transition-colors duration-200 leading-none ${
               isActive(link.href)
-                ? "text-white after:content-[''] after:block after:w-1 after:h-1 after:bg-[#842bd2] after:mx-auto after:mt-1"
+                ? "text-white after:content-[''] after:absolute after:bottom-[-6px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#842bd2] after:rounded-full"
                 : "text-[#c6c6c6] hover:text-white"
             }`}
           >

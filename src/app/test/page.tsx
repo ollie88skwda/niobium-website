@@ -3,6 +3,7 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 export const metadata = {
   title: "Test | Niobium Agency",
   description: "Test page.",
+  robots: { index: false, follow: false },
 };
 
 export default function TestPage() {

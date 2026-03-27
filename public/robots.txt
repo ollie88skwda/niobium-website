@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /portal
+Disallow: /test
+
+Sitemap: https://niobium.agency/sitemap.xml

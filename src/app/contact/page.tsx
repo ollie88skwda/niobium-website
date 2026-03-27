@@ -1,154 +1,103 @@
+import RevealOnScroll from "@/components/RevealOnScroll";
+import ReadyToAscend from "@/components/ReadyToAscend";
+import ContactForm from "./ContactForm";
+
 export const metadata = {
   title: "Contact Us | Niobium Agency",
-  description: "Let's talk. Tell us about your vision.",
+  description: "Start your project with Niobium Agency. Get in touch for social media management, SEO strategy, or content services. We respond within 24–48 hours.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen pt-40 pb-24">
-      <div className="max-w-7xl mx-auto px-8 lg:grid lg:grid-cols-12 lg:gap-24">
-        {/* Left Column */}
-        <div className="lg:col-span-5 mb-16 lg:mb-0">
-          <h1 className="text-[5rem] md:text-[7rem] leading-[0.9] font-bold tracking-tighter text-white mb-12 opacity-0 animate-fade-in-up">
-            Let&apos;s talk.
-          </h1>
-          <p className="text-on-surface-variant text-lg max-w-sm leading-relaxed opacity-0 animate-fade-in-up animate-delay-100">
-            We partner with ambitious brands to build sharp, monolithic digital
-            experiences. Tell us about your vision.
-          </p>
-          <div className="mt-24 space-y-4 opacity-0 animate-fade-in-up animate-delay-200">
-            <div className="group">
-              <span className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline opacity-50 block mb-1">
-                Email
-              </span>
-              <a
-                className="text-xl text-white hover:text-primary-fixed transition-colors duration-300"
-                href="mailto:hello@niobium.agency"
-              >
-                hello@niobium.agency
-              </a>
+    <>
+      <RevealOnScroll />
+      <main>
+        {/* Hero + Form side by side on black */}
+        <section className="h-screen w-full flex items-center bg-black">
+          <div className="max-w-7xl mx-auto w-full px-8 pt-16 lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+
+            {/* Left: Heading + contact info */}
+            <div className="lg:col-span-6 mb-16 lg:mb-0">
+              <h1 className="font-display text-[22vw] md:text-[16rem] leading-[0.8] font-normal tracking-tighter text-white uppercase">
+                Let&apos;s<br />talk.
+              </h1>
+              <div className="mt-12 space-y-8">
+                <div>
+                  <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/40 block mb-1">
+                    Email
+                  </span>
+                  <a
+                    className="font-display text-3xl text-white hover:text-primary-fixed transition-colors duration-300 uppercase"
+                    href="mailto:niobium.co@gmail.com"
+                  >
+                    niobium.co@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/40 block mb-1">
+                    Social
+                  </span>
+                  <a
+                    className="font-display text-3xl text-white hover:text-primary-fixed transition-colors duration-300 uppercase"
+                    href="https://instagram.com/niobium.studio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @niobium.studio
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="group pt-4">
-              <span className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline opacity-50 block mb-1">
-                Social
-              </span>
-              <a
-                className="text-xl text-white hover:text-primary-fixed transition-colors duration-300"
-                href="#"
-              >
-                @niobium.agency
-              </a>
+
+            {/* Right: Form — fades in after 1s */}
+            <div
+              className="lg:col-span-6"
+              style={{ animation: "fadeInUp 0.8s ease forwards 1s", opacity: 0 }}
+            >
+              <ContactForm />
+            </div>
+
+          </div>
+        </section>
+
+        {/* Social Proof Strip */}
+        <section className="py-6 bg-black text-white border-y-[4px] border-white/5 overflow-hidden">
+          <div className="flex justify-around items-center opacity-80 whitespace-nowrap">
+            <span className="font-display text-2xl tracking-widest px-8">ESTABLISHED 2025</span>
+            <span className="font-display text-2xl tracking-widest px-8">42+ LUXURY DEPLOYMENTS</span>
+            <span className="font-display text-2xl tracking-widest px-8">&quot;EXCEPTIONAL PRECISION&quot; — VOGUE</span>
+            <span className="hidden md:inline font-display text-2xl tracking-widest px-8">GLOBAL OPERATIONS</span>
+          </div>
+        </section>
+
+        {/* Inquiry Details */}
+        <div className="w-full bg-white py-32">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+              <div className="max-w-xs">
+                <p className="font-mono text-[0.7rem] text-black uppercase tracking-[0.3em] font-bold mb-4">
+                  Inquiry response time
+                </p>
+                <p className="font-mono text-black/60 text-xs leading-relaxed uppercase">
+                  We review every inquiry within 24&ndash;48 hours. For urgent
+                  matters, please mention it in the subject line.
+                </p>
+              </div>
+              <div className="max-w-xs">
+                <p className="font-mono text-[0.7rem] text-black uppercase tracking-[0.3em] font-bold mb-4">
+                  Global Reach
+                </p>
+                <p className="font-mono text-black/60 text-xs leading-relaxed uppercase">
+                  Operating from London and Berlin. Collaborating with visionaries
+                  worldwide.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Form */}
-        <div className="lg:col-span-7">
-          <form className="space-y-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="relative opacity-0 animate-fade-in-up animate-delay-100">
-                <label className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline block mb-4">
-                  Name
-                </label>
-                <input
-                  className="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary-fixed focus:ring-0 px-0 py-4 text-white placeholder:text-surface-container-highest transition-all duration-300"
-                  placeholder="John Doe"
-                  type="text"
-                />
-              </div>
-              <div className="relative opacity-0 animate-fade-in-up animate-delay-200">
-                <label className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline block mb-4">
-                  Business Name
-                </label>
-                <input
-                  className="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary-fixed focus:ring-0 px-0 py-4 text-white placeholder:text-surface-container-highest transition-all duration-300"
-                  placeholder="Acme Corp"
-                  type="text"
-                />
-              </div>
-            </div>
-            <div className="relative opacity-0 animate-fade-in-up animate-delay-300">
-              <label className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline block mb-4">
-                Email Address
-              </label>
-              <input
-                className="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary-fixed focus:ring-0 px-0 py-4 text-white placeholder:text-surface-container-highest transition-all duration-300"
-                placeholder="john@acme.com"
-                type="email"
-              />
-            </div>
-            <div className="relative opacity-0 animate-fade-in-up animate-delay-400">
-              <label className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline block mb-4">
-                Service needed
-              </label>
-              <select className="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary-fixed focus:ring-0 px-0 py-4 text-white transition-all duration-300">
-                <option className="bg-surface" disabled value="">
-                  Select a service
-                </option>
-                <option className="bg-surface" value="branding">
-                  Brand Identity
-                </option>
-                <option className="bg-surface" value="digital">
-                  Digital Product Design
-                </option>
-                <option className="bg-surface" value="development">
-                  Creative Development
-                </option>
-                <option className="bg-surface" value="consulting">
-                  Strategic Consulting
-                </option>
-              </select>
-            </div>
-            <div className="relative opacity-0 animate-fade-in-up animate-delay-500">
-              <label className="text-[0.6875rem] uppercase tracking-[0.2em] text-outline block mb-4">
-                Message
-              </label>
-              <textarea
-                className="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary-fixed focus:ring-0 px-0 py-4 text-white placeholder:text-surface-container-highest transition-all duration-300 resize-none"
-                placeholder="Tell us about your project..."
-                rows={4}
-              />
-            </div>
-            <div className="pt-8 opacity-0 animate-fade-in-up animate-delay-500">
-              <button
-                className="group relative w-full md:w-auto px-16 py-6 bg-white text-on-primary font-bold uppercase tracking-widest text-xs hover:bg-primary-fixed hover:text-white transition-all duration-300 flex items-center justify-center gap-4"
-                type="submit"
-              >
-                Send Inquiry
-                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      {/* Bottom Info */}
-      <div className="w-full bg-surface-container-lowest py-32 mt-12 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-            <div className="max-w-xs">
-              <p className="text-[0.6rem] text-outline uppercase tracking-[0.3em] mb-4">
-                Inquiry response time
-              </p>
-              <p className="text-on-surface-variant text-sm leading-relaxed">
-                We review every inquiry within 24&ndash;48 hours. For urgent
-                matters, please mention it in the subject line.
-              </p>
-            </div>
-            <div className="max-w-xs">
-              <p className="text-[0.6rem] text-outline uppercase tracking-[0.3em] mb-4">
-                Global Reach
-              </p>
-              <p className="text-on-surface-variant text-sm leading-relaxed">
-                Operating from London and Berlin. Collaborating with visionaries
-                worldwide.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+        <ReadyToAscend />
+      </main>
+    </>
   );
 }
