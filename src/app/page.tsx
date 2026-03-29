@@ -1,5 +1,6 @@
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ReadyToAscend from "@/components/ReadyToAscend";
+import FlickerHeroText from "@/components/FlickerHeroText";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,16 +19,17 @@ export default function Home() {
         <section className="h-screen flex flex-col justify-center px-8 md:px-24 bg-black reveal-on-scroll active">
           <div className="max-w-[1440px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-12">
-              <h1 className="font-display font-normal text-white mb-12 uppercase text-[16vw] md:text-[15rem] leading-[0.7] tracking-[-0.05em]">
-                NIOBIUM
-              </h1>
+              <FlickerHeroText />
               <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
                 <p className="font-body text-xl md:text-3xl text-white max-w-3xl tracking-tight font-medium leading-[1.15] uppercase">
                   You built something worth finding — We make sure They find it
                 </p>
               </div>
               <div className="mt-12 flex justify-start">
-                <Link href="/contact" className="px-12 py-6 bg-white text-black font-display text-2xl tracking-widest border-[4px] border-black hover:bg-primary-fixed hover:text-white transition-all chrome-glow-micro uppercase">
+                <Link
+                  href="/contact"
+                  className="px-12 py-6 bg-white text-black font-display text-2xl tracking-widest border-[4px] border-black hover:bg-primary-fixed hover:text-white transition-all chrome-glow-micro uppercase"
+                >
                   Work With Us
                 </Link>
               </div>
@@ -106,7 +108,10 @@ export default function Home() {
                 <h2 className="font-display text-8xl md:text-[12rem] leading-none tracking-tight text-white uppercase">
                   WORK
                 </h2>
-                <Link href="/contact" className="font-body text-[0.75rem] uppercase tracking-[0.3em] text-primary-fixed font-black border-b-4 border-primary-fixed cursor-pointer">
+                <Link
+                  href="/contact"
+                  className="font-body text-[0.75rem] uppercase tracking-[0.3em] text-primary-fixed font-black border-b-4 border-primary-fixed cursor-pointer"
+                >
                   Start a Project
                 </Link>
               </div>
@@ -133,7 +138,11 @@ export default function Home() {
                     img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCgUB5cNAQL3L-t_7f-7ByEjpfdocJMkveOm4mWAf9jS4jHH12nZ9tKEckhdLKy9zSD8D_-NdkkkEaBD99RDzk6XOLopOZ5bhm6NoT1ECLJwEx-oVXgClwiSRN5ck0OAWhinQ_WfkkenQ6zFsdWmxzhADIEcqqU9G52YYAXYrVchFns02rlXZnBIR-H38U1nR2aGxOJAYof3s1fSyuHbO5OGw8nfGaH_1luX1H-mV6DiQo5BKN2Ss5rPGoH8cbEBd6WjMaGgNOhwQ",
                   },
                 ].map((project) => (
-                  <Link href="/contact" key={project.title} className="brutalist-card-white bg-white p-4 space-y-6 group block">
+                  <Link
+                    href="/contact"
+                    key={project.title}
+                    className="brutalist-card-white bg-white p-4 space-y-6 group block"
+                  >
                     <div className="aspect-[4/5] overflow-hidden bg-black border-[4px] border-black relative">
                       <Image
                         alt={project.title}

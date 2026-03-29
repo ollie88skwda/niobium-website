@@ -18,12 +18,12 @@
   --color-outline-variant: #474747;
   --color-background: #131313;
   --color-on-background: #e2e2e2;
-
   --font-display: "Bebas Neue", cursive;
   --font-headline: "Bebas Neue", cursive;
   --font-body: "Inter", sans-serif;
   --font-label: "DM Mono", monospace;
   --font-mono: "DM Mono", monospace;
+  --font-greek: var(--font-exo2), "Exo 2", sans-serif;
 }
 
 body {
@@ -87,11 +87,11 @@ select {
 }
 
 @keyframes fadeInUp {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -101,29 +101,40 @@ select {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.animate-delay-100 {
-  animation-delay: 0.1s;
-}
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-.animate-delay-300 {
-  animation-delay: 0.3s;
-}
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-.animate-delay-500 {
-  animation-delay: 0.5s;
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+/* ── Hero flicker animation ─────────────────────────────────────────── */
+/* Simulates a neon / electrical sign flickering.                        */
+/* The text swaps (NIOBIUM <-> ΝΙΟΒΙΟ) at the darkest point (~47%).     */
+@keyframes hero-flicker {
+  0%   { opacity: 1; }
+  6%   { opacity: 0.85; }
+  8%   { opacity: 0.1; }
+  10%  { opacity: 0.95; }
+  14%  { opacity: 0.15; }
+  18%  { opacity: 0; }
+  22%  { opacity: 0.7; }
+  26%  { opacity: 0.05; }
+  30%  { opacity: 0.5; }
+  35%  { opacity: 0; }
+  40%  { opacity: 0; }
+  45%  { opacity: 0; }    /* text swap happens here */
+  50%  { opacity: 0; }
+  54%  { opacity: 0.4; }
+  58%  { opacity: 0.9; }
+  62%  { opacity: 0.2; }
+  66%  { opacity: 1; }
+  72%  { opacity: 0.75; }
+  76%  { opacity: 1; }
+  84%  { opacity: 0.9; }
+  92%  { opacity: 1; }
+  100% { opacity: 1; }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero-flicker {
+  animation: hero-flicker 0.95s linear forwards;
 }
