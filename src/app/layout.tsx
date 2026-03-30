@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, DM_Mono, Inter, Philosopher } from "next/font/google";
+import { Bebas_Neue, DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -25,12 +25,6 @@ const inter = Inter({
   display: "swap",
 });
 
-const philosopher = Philosopher({
-  subsets: ["latin", "greek"],
-  weight: ["700"],
-  variable: "--font-philosopher",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://niobium.agency"),
@@ -107,13 +101,17 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
       <body
-        className={`${bebasNeue.variable} ${dmMono.variable} ${inter.variable} ${philosopher.variable} antialiased`}
+        className={`${bebasNeue.variable} ${dmMono.variable} ${inter.variable} antialiased`}
       >
         <Navbar />
         {children}
