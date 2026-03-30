@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, DM_Mono, Inter, Exo_2 } from "next/font/google";
+import { Bebas_Neue, DM_Mono, Inter, Philosopher } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -25,10 +25,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const exo2 = Exo_2({
+const philosopher = Philosopher({
   subsets: ["latin", "greek"],
-  weight: ["900"],
-  variable: "--font-exo2",
+  weight: ["700"],
+  variable: "--font-philosopher",
   display: "swap",
 });
 
@@ -113,7 +113,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${bebasNeue.variable} ${dmMono.variable} ${inter.variable} ${exo2.variable} antialiased`}
+        className={`${bebasNeue.variable} ${dmMono.variable} ${inter.variable} ${philosopher.variable} antialiased`}
       >
         <Navbar />
         {children}

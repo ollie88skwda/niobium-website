@@ -23,7 +23,7 @@
   --font-body: "Inter", sans-serif;
   --font-label: "DM Mono", monospace;
   --font-mono: "DM Mono", monospace;
-  --font-greek: var(--font-exo2), "Exo 2", sans-serif;
+  --font-greek: var(--font-philosopher), "Philosopher", serif;
 }
 
 body {
